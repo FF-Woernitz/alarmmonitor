@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('RobotoCondensed-Regular-webfont.eot');
+    src: url('RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('RobotoCondensed-Regular-webfont.woff') format('woff'),
+    url('RobotoCondensed-Regular-webfont.ttf') format('truetype'),
+    url('RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #222222;
+    color: #E6E6E6;
+    font-family: roboto_condensedregular;
+    overflow: hidden;
+}
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #333333;
+}
+
+#wappen {
+    right: 5px;
+    height: 70px;
+    align: right;
+    padding-right: 10px;
+}
+
+.header-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 400%;
+    align: center;
+    vertical-align: bottom;
+}
+
+.alert-data{
+    width: 59.89%;
+}
+.catchword{
+    font-size: 5vw;
+}
+
+.location{
+    font-size: 5vw;
+}
+
+.remark{
+    font-size: 4vw;
+}
+
+.clock{
+    font-size: 3.2vw;
+}
+
+.details{
+    font-size: 3.2vw;
+}
+
+.div_maps{
+    width:39.8%;
+    height: 100%;
+    background: #303030;
+}
+
+.alert-data-field{
+    background-color: #303030;
+    font-weight: 600;
+    margin-bottom: 5px;
+    padding: 2px;
+    border: solid red thin;
+}
+
+#map{
+    width: 100%;
+    border: solid red thin;
+    height: 100%;
+}
+
+.div_map{
+    width: 100%;
+    height: 100%;
+}
+
+.no-alert{
+    width: 100%;
+    height: 89vh;
+}
+
+.no-alert-text{
+    height: 250px;
+    line-height: 250px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 9.2vw;
+}
+
+.img-no-alert{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 5.2vw;
+    height: 400px;
+}
+
+.img-no-alert-img{
+    height: 450px;
+    padding: 20px;
+}
+.clock-no-alert{
+    height: 200px;
+    line-height: 200px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 7vw;
+}
+
+.alert-status{
+    font-size: 3.2vw
+}
+
+.no-alert-status{
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 6vw;
+    border-top: black 3px solid;
+}
+
+.status {
+    display: flex;
+}
+
+.status div{
+    flex: 1;
+    width: auto;
+    text-align: center;
+    border-right: black 3px solid;
+    text-shadow:
+            -1px -1px 0 black,
+            0px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            0px 1px 0 black,
+            1px 1px 0 black;
+
+}
+
+.status div:last-child{
+    border-right: none;
+}
+
+.status-1{
+    background-color: #00FF33;
+}
+.status-2{
+    background-color: #00a200;
+}
+.status-3{
+    background-color: #FFA385;
+}
+.status-4{
+    background-color: #FF0000;
+}
+.status-5{
+    background-color: #FFFF00;
+}
+.status-6{
+    background-color: #666666;
+}
+.status-0{
+    background-color: #FF9900;
+}
+
+.pure{
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.imageholder{position:relative;top: 60%;}
+
+.watermark
+{
+    position: absolute;
+    color: #66FF33FF;
+    opacity: 90%;
+    background-color: transparent;
+    transform: rotate(20deg);
+    text-align: center;
+    left: 15%;
+    font-size: 15vw;
+    z-index: 5000;
+    text-shadow:  3px  3px 1px yellow,
+    3px -3px 1px yellow,
+    -3px  3px 1px yellow,
+    -3px -3px 1px yellow;
+}
+
+.alarmed{
+    width: 100%;
+    font-size: 5vw;
+    display: none;
+}
+
+.vehicle{
+    border: #222222 solid 1px;
+    margin: 2px 5px;
+    padding: 2px;
+    background-color: #005a00;
+
+}
+
+
+@keyframes blink {
+    0%   {background-color: #0000ee;}
+    25%  {background-color: #303030;}
+    50%  {background-color: #0000ee;}
+    75%  {background-color: #303030;}
+    100% {background-color: #303030;}
+}
+
+@-webkit-keyframes blink {
+    0%   {background-color: #0000ee;}
+    25%  {background-color: #303030;}
+    50%  {background-color: #0000ee;}
+    75%  {background-color: #303030;}
+    100% {background-color: #303030;}
+}
+
+.alert{
+    animation: blink 0.5s steps(2, end) infinite alternate;
+    -webkit-animation: blink 0.5s steps(2, end) infinite alternate;
+}
