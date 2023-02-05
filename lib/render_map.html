@@ -32,15 +32,14 @@
                 ],
                 units: 'm',
                 projection: new OpenLayers.Projection("EPSG:900913"),
-                displayProjection: new OpenLayers.Projection("EPSG:4326")
+                displayProjection: new OpenLayers.Projection("EPSG:4326"),
+                theme: ""
             } );
 
-            //map.addLayer(new OpenLayers.Layer.OSM("Local Map","http://192.168.178.63/map/mapnik/${z}/${x}/${y}.png",{ maxZoomLevel: 17, numZoomLevels: 18}));
+            //map.addLayer(new OpenLayers.Layer.OSM.Mapnik("Map",{ maxZoomLevel: 18, numZoomLevels: 19, isBaseLayer: true }));
 
-            map.addLayer(new OpenLayers.Layer.OSM.Mapnik("Map",{ maxZoomLevel: 18, numZoomLevels: 19, isBaseLayer: true }));
-
-            //Black/White
-            //map.addLayer(new OpenLayers.Layer.OSM("Black/white map","http://a.www.toolserver.org/tiles/bw-mapnik/${z}/${x}/${y}.png",{ maxZoomLevel: 17, numZoomLevels: 18, isBaseLayer: true }))
+            // OSM DE
+            map.addLayer(new OpenLayers.Layer.OSM("Black/white map","https://tile.openstreetmap.de/${z}/${x}/${y}.png",{ maxZoomLevel: 18, numZoomLevels: 19, isBaseLayer: true }))
 
             //Hydranten
             //map.addLayer(new OpenLayers.Layer.OSM("Fire hydrants","http://www.openfiremap.org/hytiles/${z}/${x}/${y}.png",{ maxZoomLevel: 17, numZoomLevels: 18, alpha: true, isBaseLayer: false }));
