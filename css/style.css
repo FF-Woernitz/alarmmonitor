@@ -74,6 +74,14 @@ body {
     margin-bottom: 5px;
     padding: 2px;
     border: solid red thin;
+    text-shadow:
+            -2px -2px 2px black,
+            0px -2px 2px black,
+            2px -2px 2px black,
+            -2px 2px 2px black,
+            0px 2px 2px black,
+            2px 2px 2px black;
+
 }
 
 #map{
@@ -143,12 +151,12 @@ body {
     text-align: center;
     border-right: black 3px solid;
     text-shadow:
-            -1px -1px 0 black,
-            0px -1px 0 black,
-            1px -1px 0 black,
-            -1px 1px 0 black,
-            0px 1px 0 black,
-            1px 1px 0 black;
+            -2px -2px 2px black,
+            0px -2px 2px black,
+            2px -2px 2px black,
+            -2px 2px 2px black,
+            0px 2px 2px black,
+            2px 2px 2px black;
 
 }
 
