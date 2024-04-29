@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     mqtt_client.on('connect', function () {
         mqtt_client.subscribe(MQTT_PATH + '/data');
+        mqtt_client.subscribe(MQTT_PATH + '/image');
         mqtt_client.subscribe(MQTT_PATH + '/vehicle-status/+');
 
         heartbeat()
@@ -15,6 +16,8 @@ $(document).ready(function () {
     mqtt_client.on('message', function (topic, message) {
         if(topic === MQTT_PATH + '/data') {
             onMqttMessage(JSON.parse(message.toString()));
+        } else if(topic === MQTT_PATH + '/image') {
+            onMqttImageMessage(message.toString());
         } else {
             onMqttStatusMessage(JSON.parse(message.toString()))
         }
@@ -30,6 +33,7 @@ let alerttime = new Date();
 
 function setAlertDisplay(data) {
     clearInterval(loop);
+    onMqttImageMessage("");
     setAlertData(data);
     loopAlert();
     $("#standby_div").hide();
@@ -84,6 +88,16 @@ function onMqttMessage(msg) {
         setAlertDisplay(msg);
     } else {
         setStandbyDisplay();
+    }
+}
+
+function onMqttImageMessage(msg){
+    if(msg === ""){
+        $("#image_div").hide();
+        $("#image_img").attr("src","");
+    } else {
+        $("#image_div").show();
+        $("#image_img").attr("src",msg);
     }
 }
 
