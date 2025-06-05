@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
@@ -23,40 +22,30 @@
 
 </head>
 <body>
-<div id="image_div" style="display: none">
+<div id="image_div" class="page_div" style="display: none">
     <img id="image_img" src="images/wappen.png">
 </div>
-<div id="alert_div" style="display: none">
-    <div class="catchword alert-data-field" id="catchword" align="center">Loading...</div>
-    <div class="location alert-data-field" id="location" align="center">Loading...</div>
 
-<!--        <div class='imageholder'>-->
-<!--            <div class='watermark'>TESTALARM!</div>-->
-<!--        </div>-->
-    <div class="alert-data pure" id="alert-data" align="center" >
+<div id="alert_div" class="page_div" style="display: none">
+    <div class="catchword alert-data-field" id="catchword">Loading...</div>
+    <div class="location alert-data-field" id="location">Loading...</div>
+    <div class="alert-data pure" id="alert-data">
         <div class="remark alert-data-field" id="remark">Loading...</div>
-        <div class="alert-data-field details">Alarmzeit: <span id="alert-start">--:--</span> &middot; <span id="alert-time">--:--</span></div>
+        <div class="alert-data-field details">Alarmzeit: <span id="alert-start">--:--</span> &middot; <span id="alert-time">--:--</span> seit Alarm</div>
         <div class="alert-data-field clock"><span id="date_alert">--.--.--</span> &middot; <span id="time_alert">--:--</span></div>
         <div class="alert-data-field alert-status status">Loading...</div>
     </div>
     <div class="div_maps pure" id="div_maps">
-        <div class="alarmed alert-data-field pure" id="alarmed" align="center">
-            <div class="pure vehicle alert">11/1</div>
-            <div class="pure vehicle alert">40/1</div>
-            <div class="pure vehicle">40/2</div>
-            <div class="pure vehicle">56/1</div>
-        </div>
-        <div class="div_map"><iframe id="map" src="lib/render_map.html?lat=49.2899949&lon=10.2578078" frameborder="0"></iframe></div>
+        <div class="alarmed alert-data-field pure" id="alarmed"></div>
+        <div class="div_map"><iframe id="map"></iframe></div>
     </div>
 </div>
 
-
-<div class="no-alert" id="standby_div" style="display: none">
+<div class="page_div no-alert" id="standby_div" style="display: none">
     <div class="no-alert-text">Feuerwehr Wörnitz</div>
     <div class="img-no-alert"><img class="img-no-alert-img" src="images/DiveraAnmeldungHeader.png"></div>
-    <div class="clock-no-alert" ><span id="date_standby"></span> &middot; <span id="time_standby"></span></div>
+    <div class="clock-no-alert"><span id="date_standby"></span> &middot; <span id="time_standby"></span></div>
     <div class="no-alert-status status"><div>Loading...</div></div>
 </div>
-
 </body>
 </html>

@@ -60,7 +60,7 @@ function alert_time(){
     } else {
         timestring += "0" + s;
     }
-    $("#alert-time").text(timestring + " seit Alarm");
+    $("#alert-time").text(timestring);
     delete(now);
     delete(alerttime_obj);
 }
